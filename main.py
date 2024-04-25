@@ -3,9 +3,9 @@ from model import DependencyParserModel
 from train_and_evaluate import train_and_evaluate, evaluate_model
 
 def main():
-    train_trees = parse_conllu('/content/sample_data/en_ewt-ud-train.conllu')
-    dev_trees = parse_conllu('/content/sample_data/en_ewt-ud-dev.conllu')
-    test_trees = parse_conllu('/content/sample_data/en_ewt-ud-test.conllu')
+    train_trees = parse_conllu('en_ewt-ud-train.conllu')
+    dev_trees = parse_conllu('en_ewt-ud-dev.conllu')
+    test_trees = parse_conllu('en_ewt-ud-test.conllu')
 
     word_vocab, label_vocab = build_vocab(train_trees + dev_trees + test_trees)
     train_dataset = DependencyDataset(train_trees, word_vocab, label_vocab)
