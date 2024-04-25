@@ -1,3 +1,6 @@
+from parser import parse_conllu, DependencyDataset, custom_collate_fn
+from model import DependencyParserModel
+from train_and_evaluate import train_and_evaluate, evaluate_model
 def main():
     train_trees = parse_conllu('/content/sample_data/en_ewt-ud-train.conllu')
     dev_trees = parse_conllu('/content/sample_data/en_ewt-ud-dev.conllu')
