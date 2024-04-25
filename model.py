@@ -1,3 +1,4 @@
+import torch.nn as nn
 class DependencyParserModel(nn.Module):
     def __init__(self, vocab_size, label_size, embedding_dim, hidden_dim):
         super().__init__()
