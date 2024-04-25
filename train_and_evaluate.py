@@ -1,3 +1,5 @@
+import torch
+from torch.utils.data import DataLoader
 def train_and_evaluate(model, data_loader, optimizer, criterion_head, criterion_label, epoch_count):
     for epoch in range(epoch_count):
         model.train()
